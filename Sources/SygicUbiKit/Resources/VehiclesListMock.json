@@ -1,0 +1,66 @@
+{
+  "data": {
+    "vehicles": [
+      {
+        "publicId": "95887028-fa10-41e5-bc63-493768bb0e95",
+        "name": "Superb",
+        "state": "active",
+        "vehicleType": "car"
+      },
+      {
+        "publicId": "b967ea05-7ea4-4e98-9fca-42ce2b3201973",
+        "name": "Sporta",
+        "state": "inactive",
+        "vehicleType": "car"
+      },
+      {
+        "publicId": "b967ea05-7ea4-4e98-8fca-42c11320101",
+        "name": "HONDA",
+        "state": "inactive",
+        "vehicleType": "car"
+      },
+      {
+        "publicId": "b967ea05-7ea4-4e98-8fca-42ce2b3255501",
+        "name": "VOLVO",
+        "state": "inactive",
+        "vehicleType": "motorcycle"
+      },
+      {
+        "publicId": "b967ea05-7ea4-4e98-8fca-42ce2b3201233",
+        "name": "VOLVO",
+        "state": "inactive",
+        "vehicleType": "motorcycle"
+      },
+      {
+        "publicId": "b967ea05-7ea4-4e98-8fca-42ce2b2220101",
+        "name": "HONDA",
+        "state": "inactive",
+        "vehicleType": "car"
+      },
+      {
+        "publicId": "b967ea05-7ea4-4e98-8fca-42ce2b3203501",
+        "name": "VOLVO",
+        "state": "inactive",
+        "vehicleType": "motorcycle"
+      },
+      {
+        "publicId": "b967ea05-7ea4-4e98-8fca-42ce2b320145",
+        "name": "HONDA",
+        "state": "inactive",
+        "vehicleType": "car"
+      },
+      {
+        "publicId": "b967ea05-7ea4-4e98-8fca-42ce33b320101",
+        "name": "VOLVO",
+        "state": "inactive",
+        "vehicleType": "motorcycle"
+      },
+      {
+        "publicId": "b967ea05-7ea4-4e98-8fca-42ce2ds320101",
+        "name": "HONDA",
+        "state": "inactive",
+        "vehicleType": "car"
+      }
+    ]
+  }
+}
