@@ -1,6 +1,6 @@
 import Foundation
 
-public struct SwiftUbiPackage {
+public struct SygicUbiKit {
     public private(set) var text = "Hello, World!"
 
     public init() {
