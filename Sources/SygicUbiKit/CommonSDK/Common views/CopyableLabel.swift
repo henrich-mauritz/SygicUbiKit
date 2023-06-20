@@ -19,14 +19,13 @@ public class CopyableLabel: UILabel {
 
     override public func copy(_ sender: Any?) {
         UIPasteboard.general.string = text
-        UIMenuController.shared.setMenuVisible(false, animated: true)
+        UIMenuController.shared.hideMenu()
     }
 
     @objc private func showCopyMenu() {
         guard !UIMenuController.shared.isMenuVisible else { return }
         becomeFirstResponder()
-        UIMenuController.shared.setTargetRect(frame, in: superview ?? self)
-        UIMenuController.shared.setMenuVisible(true, animated: true)
+        UIMenuController.shared.showMenu(from: superview ?? self, rect: frame)
     }
 
     override public var canBecomeFirstResponder: Bool {

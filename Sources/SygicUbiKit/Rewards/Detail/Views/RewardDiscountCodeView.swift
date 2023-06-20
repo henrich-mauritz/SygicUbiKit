@@ -122,7 +122,7 @@ public class RewardDiscountCodeView: UIView, InjectableType {
 
     override public func copy(_ sender: Any?) {
         UIPasteboard.general.string = codeLabel.text
-        UIMenuController.shared.setMenuVisible(false, animated: true)
+        UIMenuController.shared.hideMenu()
     }
 
     public func update(_ code: String?, validity: String?) {
@@ -130,11 +130,9 @@ public class RewardDiscountCodeView: UIView, InjectableType {
         validityLabel.text = validity
     }
 
-    @objc
-private func showCopyMenu() {
+    @objc private func showCopyMenu() {
         guard !UIMenuController.shared.isMenuVisible else { return }
         becomeFirstResponder()
-        UIMenuController.shared.setTargetRect(codeLabel.frame, in: self)
-        UIMenuController.shared.setMenuVisible(true, animated: true)
+        UIMenuController.shared.showMenu(from: self, rect: codeLabel.frame)
     }
 }
