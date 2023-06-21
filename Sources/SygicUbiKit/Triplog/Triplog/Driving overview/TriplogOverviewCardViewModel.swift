@@ -4,7 +4,9 @@ import UIKit
 public class TriplogOverviewCardViewModel: TriplogOverviewCardViewModelProtocol {
     public var model: TriplogOverviewCardDataType?
 
-    public var image: UIImage? { monthImage(for: model?.monthNumber ?? 0) }
+    public var image: UIImage? {
+        monthImage(for: model?.monthNumber ?? 0)
+    }
 
     public var score: String {
         switch model?.cardType {
@@ -84,12 +86,12 @@ public class TriplogOverviewCardViewModel: TriplogOverviewCardViewModelProtocol 
         case .tripsForDateRange, .archivedPeriod:
             return UIImage(named: "period", in: .module, compatibleWith: nil)
         default:
-            guard month <= 12 && month >= 1 else { return UIImage(named: "month8", in: .module, compatibleWith: nil) }
+            guard month <= 12 && month >= 1 else { return UIImage(named: "month8", in: .main, compatibleWith: nil) }
             var monthAssetName = "month\(month)"
             if month == currentMonth {
                 monthAssetName.append("Current")
             }
-            return UIImage(named: monthAssetName, in: .module, compatibleWith: nil)
+            return UIImage(named: monthAssetName, in: .main, compatibleWith: nil)
         }
     }
 

@@ -82,7 +82,7 @@ open class MonthlyStatsViewModel: MonthlyStatsViewModelType, InjectableType {
     public var overallCellViewModel: MonthlyStatsOverviewCellViewModelType {
         //Creating the corrent image
         let monthImageName: String = currentDate != nil ? "month\(String(describing: currentDate!.currentMonthNumber))Current" : "month\(String(describing: Date().currentMonthNumber))Current"
-        let image: UIImage? = UIImage(named: monthImageName, in: .module, compatibleWith: nil)
+        let image: UIImage? = UIImage(named: monthImageName, in: .main, compatibleWith: nil)
         let monthScore: String = Format.scoreFormatted(value: stats?.statistics.totalScore ?? 0)
         let state: ReportScoreMonthComparision = stats?.statistics.monthComparison ?? .none
         let previousMonthScore: String = Format.scoreFormatted(value: stats?.statistics.previousTotalScore ?? 0)
