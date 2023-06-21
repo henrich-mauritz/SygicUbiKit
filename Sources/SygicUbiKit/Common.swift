@@ -1,12 +1,5 @@
 import Foundation
 
-public struct SygicUbiKit {
-    public private(set) var text = "Hello, World!"
-
-    public init() {
-    }
-}
-
 extension String {
     var localized: String {
         return Bundle.main.localizedString(forKey: self, value: self, table: nil)
