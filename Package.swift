@@ -12,6 +12,7 @@ let package = Package(
     products: [
         .library(
             name: "SygicUbiKit",
+            type: .dynamic,
             targets: ["SygicUbiKit"]),
     ],
     dependencies: [
