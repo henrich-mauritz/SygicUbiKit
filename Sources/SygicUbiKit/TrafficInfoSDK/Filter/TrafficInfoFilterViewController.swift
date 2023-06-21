@@ -65,13 +65,23 @@ class TrafficInfoFilterViewController: UIViewController, TrafficInfoFilterRowDel
         handleView.layer.cornerRadius = 2
         view.addSubview(handleView)
         
+        let dismissView: UIView = UIView()
+        dismissView.translatesAutoresizingMaskIntoConstraints = false
+        dismissView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))
+        view.addSubview(dismissView)
+        
         NSLayoutConstraint.activate([
             handleView.topAnchor.constraint(equalTo: stackView.topAnchor, constant: 6),
             handleView.centerXAnchor.constraint(equalTo: stackView.centerXAnchor),
             
             stackView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            
+            dismissView.topAnchor.constraint(equalTo: view.topAnchor),
+            dismissView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            dismissView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            dismissView.bottomAnchor.constraint(equalTo: stackView.topAnchor)
         ])
         
         let titleLabel = UILabel.trConstructLabel(text: "trafficInfo.filter.title".localized, font: .stylingFont(.bold, with: 16), color: .foregroundPrimary, alignment: .left)
@@ -93,6 +103,11 @@ class TrafficInfoFilterViewController: UIViewController, TrafficInfoFilterRowDel
     func trafficInfoFilterRowStateChanged(type: TrafficInfoType, state: Bool) {
         viewModel.updateModel(type: type, state: state)
         delegate?.filterSelectionChanged()
+    }
+    
+    //MARK: Handle Dismiss
+    @objc func handleTap() {
+        self.dismiss(animated: true)
     }
     
 }

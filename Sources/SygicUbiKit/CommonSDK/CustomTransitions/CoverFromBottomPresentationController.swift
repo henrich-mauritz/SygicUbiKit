@@ -20,8 +20,6 @@ public class CoverFromBottomPresentationController: UIPresentationController {
         super.init(presentedViewController: presentedViewController, presenting: presentingViewController)
         //dismiss view using swipe
         presentedView!.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(handlePan(_:))))
-        //dismiss view using tap to grey area
-        presentedView!.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap(_:))))
     }
       
     public override var frameOfPresentedViewInContainerView: CGRect {

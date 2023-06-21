@@ -61,13 +61,23 @@ class TrafficInfoDetailViewController: BaseViewController {
         handleView.layer.cornerRadius = 2
         view.addSubview(handleView)
         
+        let dismissView: UIView = UIView()
+        dismissView.translatesAutoresizingMaskIntoConstraints = false
+        dismissView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))
+        view.addSubview(dismissView)
+        
         NSLayoutConstraint.activate([
             handleView.topAnchor.constraint(equalTo: stackView.topAnchor, constant: 6),
             handleView.centerXAnchor.constraint(equalTo: stackView.centerXAnchor),
             
             stackView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            
+            dismissView.topAnchor.constraint(equalTo: view.topAnchor),
+            dismissView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            dismissView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            dismissView.bottomAnchor.constraint(equalTo: stackView.topAnchor)
         ])
         
         //From To header
@@ -185,6 +195,13 @@ class TrafficInfoDetailViewController: BaseViewController {
     
     func onCloseAction() {
         
+        self.dismiss(animated: true) {
+            self.onCloseBlock?()
+        }
+    }
+    
+    //MARK: Handle Dismiss
+    @objc func handleTap() {
         self.dismiss(animated: true) {
             self.onCloseBlock?()
         }
