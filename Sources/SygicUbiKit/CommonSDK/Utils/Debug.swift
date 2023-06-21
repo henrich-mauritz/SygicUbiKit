@@ -4,9 +4,10 @@ import Foundation
 
 public class ADASDebug {
     public static var enabled: Bool {
-        guard let plistVar = Bundle.main.infoDictionary?["DEBUG_LOGS"] as? String,
-              let boolValue = plistVar.bool else { return false }
-        return boolValue
+//        guard let plistVar = Bundle.main.infoDictionary?["DEBUG_LOGS"] as? String,
+//              let boolValue = plistVar.bool else { return false }
+//        return boolValue
+        return false // TODO
     }
 
     public static var visionDebugEnabled: Bool {
