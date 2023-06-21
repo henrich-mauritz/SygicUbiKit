@@ -1,5 +1,4 @@
 import CoreLocation
-import Polyline
 import UIKit
 
 // MARK: - TripDetailDataProtocol
@@ -83,8 +82,8 @@ public class NetworkTripData: Codable {
             var canBeReported: Bool
             var eventNumber: Int
 
-            lazy var polyline: Polyline? = {
-                Polyline(encodedPolyline: route)
+            lazy var polyline: GooglePolyline? = {
+                GooglePolyline(encodedPolyline: route)
             }()
 
             var coordinates: [CLLocationCoordinate2D] { polyline?.coordinates ?? [] }
@@ -118,8 +117,8 @@ public class NetworkTripData: Codable {
 
     var data: ContainerData
 
-    lazy var polyline: Polyline? = {
-        Polyline(encodedPolyline: data.route)
+    lazy var polyline: GooglePolyline? = {
+        GooglePolyline(encodedPolyline: data.route)
     }()
 }
 

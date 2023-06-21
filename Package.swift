@@ -23,8 +23,7 @@ let package = Package(
         .package(url: "https://github.com/henrich-mauritz/VisionLib.git", from: "1.2.21"),
         .package(url: "https://github.com/henrich-mauritz/SygicAuth.git", from: "1.3.1"),
         .package(url: "https://github.com/henrich-mauritz/YoutubePlayer.git", from: "1.0.4"),
-        .package(url: "https://github.com/henrich-mauritz/AppAuth.git", from: "1.6.2"),
-        .package(url: "https://github.com/raphaelmor/Polyline.git", from: "5.0.2")
+        .package(url: "https://github.com/henrich-mauritz/AppAuth.git", from: "1.6.2")
     ],
     targets: [
         .target(
@@ -38,8 +37,7 @@ let package = Package(
                 "VisionLib",
                 "SygicAuth",
                 "YoutubePlayer",
-                "AppAuth",
-                "Polyline"
+                "AppAuth"
             ]),
     ]
 )
