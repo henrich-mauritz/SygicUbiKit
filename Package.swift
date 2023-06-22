@@ -37,6 +37,9 @@ let package = Package(
                 "SygicAuth",
                 "YoutubePlayer",
                 "AppAuth"
-            ]),
+            ],
+            resources: [
+                .process("Resources")
+            ])
     ]
 )
