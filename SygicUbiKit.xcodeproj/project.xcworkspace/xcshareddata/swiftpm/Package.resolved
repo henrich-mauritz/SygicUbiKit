@@ -1,0 +1,77 @@
+{
+  "pins" : [
+    {
+      "identity" : "appauth",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:henrich-mauritz/AppAuth.git",
+      "state" : {
+        "revision" : "f09b43e58d856a00017d1f3bdaedb66f6104eba8",
+        "version" : "1.6.2"
+      }
+    },
+    {
+      "identity" : "driving",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:henrich-mauritz/Driving.git",
+      "state" : {
+        "revision" : "750e796cdd14a1d6fbd95541421b3d2424a5467e",
+        "version" : "2.4.0"
+      }
+    },
+    {
+      "identity" : "floatingpanel",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:scenee/FloatingPanel.git",
+      "state" : {
+        "revision" : "a0ba3af01207d21bb4800dda9f900470e1921613",
+        "version" : "2.6.2"
+      }
+    },
+    {
+      "identity" : "swinject",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:Swinject/Swinject.git",
+      "state" : {
+        "revision" : "8bc503e60965298984fb58cf47b71c541449fe2a",
+        "version" : "2.8.3"
+      }
+    },
+    {
+      "identity" : "sygicauth",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:henrich-mauritz/SygicAuth.git",
+      "state" : {
+        "revision" : "f8c1243c914550ed74784f602d3d0a30df99d3f3",
+        "version" : "1.3.1"
+      }
+    },
+    {
+      "identity" : "sygicmaps",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:henrich-mauritz/SygicMaps.git",
+      "state" : {
+        "revision" : "f7c32da525005e5655b293dbfca0a8d53ab45c5c",
+        "version" : "22.1.2"
+      }
+    },
+    {
+      "identity" : "visionlib",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:henrich-mauritz/VisionLib.git",
+      "state" : {
+        "revision" : "bae057fbfdbd107a3de4436aebba47664c415895",
+        "version" : "1.2.21"
+      }
+    },
+    {
+      "identity" : "youtubeplayer",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:henrich-mauritz/YoutubePlayer.git",
+      "state" : {
+        "revision" : "6f4dea0b756e7a070b97a28613fde7bd3e1523d2",
+        "version" : "1.0.4"
+      }
+    }
+  ],
+  "version" : 2
+}
