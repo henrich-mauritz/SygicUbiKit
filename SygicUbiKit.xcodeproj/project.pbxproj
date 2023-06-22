@@ -254,7 +254,6 @@
 		C6E50C482A44E0D100B1EEC2 /* DiscountsChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E509D22A44E0D000B1EEC2 /* DiscountsChallengeView.swift */; };
 		C6E50C492A44E0D100B1EEC2 /* DiscountDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E509D32A44E0D000B1EEC2 /* DiscountDetailCell.swift */; };
 		C6E50C4A2A44E0D100B1EEC2 /* DiscountContainer+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E509D52A44E0D000B1EEC2 /* DiscountContainer+Injection.swift */; };
-		C6E50C4B2A44E0D100B1EEC2 /* SygicDashcam.h in Headers */ = {isa = PBXBuildFile; fileRef = C6E509D72A44E0D000B1EEC2 /* SygicDashcam.h */; };
 		C6E50C4C2A44E0D100B1EEC2 /* DashcamInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E509D82A44E0D000B1EEC2 /* DashcamInterface.swift */; };
 		C6E50C4D2A44E0D100B1EEC2 /* DashcamHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E509DA2A44E0D000B1EEC2 /* DashcamHelpers.swift */; };
 		C6E50C4E2A44E0D100B1EEC2 /* DashcamFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E509DB2A44E0D000B1EEC2 /* DashcamFormatter.swift */; };
@@ -394,7 +393,6 @@
 		C6E50CD42A44E0D100B1EEC2 /* TriplogMonthlyListingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E50A8A2A44E0D000B1EEC2 /* TriplogMonthlyListingType.swift */; };
 		C6E50CD52A44E0D100B1EEC2 /* TripLogSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E50A8C2A44E0D000B1EEC2 /* TripLogSettings.swift */; };
 		C6E50CD62A44E0D100B1EEC2 /* TriplogModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E50A8D2A44E0D000B1EEC2 /* TriplogModule.swift */; };
-		C6E50CD72A44E0D100B1EEC2 /* Triplog.h in Headers */ = {isa = PBXBuildFile; fileRef = C6E50A8E2A44E0D000B1EEC2 /* Triplog.h */; };
 		C6E50CD82A44E0D100B1EEC2 /* TripDetailModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E50A912A44E0D000B1EEC2 /* TripDetailModels.swift */; };
 		C6E50CD92A44E0D100B1EEC2 /* TriplogTripsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E50A922A44E0D000B1EEC2 /* TriplogTripsModels.swift */; };
 		C6E50CDA2A44E0D100B1EEC2 /* TriologOverviewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E50A932A44E0D000B1EEC2 /* TriologOverviewModels.swift */; };
@@ -3229,8 +3227,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C6E50CD72A44E0D100B1EEC2 /* Triplog.h in Headers */,
-				C6E50C4B2A44E0D100B1EEC2 /* SygicDashcam.h in Headers */,
 				C6E508862A44E0C700B1EEC2 /* SygicUbiKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
