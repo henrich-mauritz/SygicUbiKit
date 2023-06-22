@@ -1,5 +1,4 @@
 import Foundation
-import KeychainAccess
 
 // MARK: - AuthTokenDataType
 
@@ -15,11 +14,10 @@ protocol AuthTokenDataType {
 extension AuthTokenDataType where Self: Codable {
     static func cleanKeychain() {
         guard let userId = UserDefaults.standard.string(forKey: userIdStoreKey) else { return }
-        let keychain = Keychain(service: keychainServiceName(for: userId))
         UserDefaults.standard.removeObject(forKey: userIdStoreKey)
         UserDefaults.standard.synchronize()
         do {
-            try keychain.removeAll()
+            try Keychain.deleteAll(service: keychainServiceName(for: userId))
         } catch {
             print(error)
         }
@@ -27,10 +25,9 @@ extension AuthTokenDataType where Self: Codable {
 
     static func storedData() -> Self? {
         guard let userId = UserDefaults.standard.string(forKey: userIdStoreKey) else { return nil }
-        let keychain = Keychain(service: keychainServiceName(for: userId))
         let decoder = JSONDecoder()
         do {
-            guard let encodedData = try keychain.getData(authTokenDataServiceKey) else { return nil }
+            guard let encodedData = try Keychain.get(account: authTokenDataServiceKey, service: keychainServiceName(for: userId)) else { return nil }
             let authData = try decoder.decode(Self.self, from: encodedData)
             guard authData.isValid else {
                 cleanKeychain()
@@ -53,11 +50,10 @@ extension AuthTokenDataType where Self: Codable {
         UserDefaults.standard.set(userId, forKey: Self.userIdStoreKey)
         UserDefaults.standard.synchronize() //TODO: this method is unnecessary and should not be used! RTFM!
 
-        let keychain = Keychain(service: Self.keychainServiceName(for: userId))
         let encoder = JSONEncoder()
         do {
             let encodedData = try encoder.encode(self)
-            try keychain.set(encodedData, key: Self.authTokenDataServiceKey)
+            try Keychain.set(value: encodedData, account: Self.authTokenDataServiceKey, service: Self.keychainServiceName(for: userId))
         } catch {
             print(error)
         }

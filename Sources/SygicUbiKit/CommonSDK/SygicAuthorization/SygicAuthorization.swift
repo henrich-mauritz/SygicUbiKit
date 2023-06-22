@@ -8,7 +8,6 @@
 import Foundation
 import UIKit
 import SygicAuth
-import KeychainAccess
 
 //TODO:    why the hell I have here missing type?! because it is defined in maps sdk..crap
 @objc public class SygicAuthorization : NSObject, SYAuthDelegate /*, SYAuthProvider*/ {
@@ -98,13 +97,15 @@ import KeychainAccess
         //If the value is nil, wait and get the value again later. This happens, for example, after the device has been restarted but before the user has unlocked the device.
         //TODO: toto by sa mozno zislo aj inde.
         let deviceIdKey = "DeviceIdKey"
-        let keychain = Keychain(service: "Device")
-        var deviceId: String? = try? keychain.get(deviceIdKey)
-        if deviceId == nil {
+        let service = "Device"
+        var deviceData = try? Keychain.get(account: deviceIdKey, service: service)
+        var deviceId: String?
+        
+        if deviceData == nil {
             deviceId = UIDevice.current.identifierForVendor?.uuidString
             if let deviceId = deviceId {
                 do {
-                    try keychain.set(deviceId, key: deviceIdKey)
+                    try Keychain.set(value: Data(deviceId.utf8), account: deviceIdKey, service: service)
                 }
                 catch {
                     //not sure what to do here. Probably nothing. Next time we try again.

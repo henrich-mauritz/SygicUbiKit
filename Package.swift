@@ -18,7 +18,6 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/Swinject/Swinject.git", from: "2.8.3"),
         .package(url: "https://github.com/scenee/FloatingPanel.git", from: "2.6.2"),
-        .package(url: "https://github.com/kishikawakatsumi/KeychainAccess.git", from: "4.2.2"),
         .package(url: "https://github.com/henrich-mauritz/SygicMaps.git", from: "22.1.2"),
         .package(url: "https://github.com/henrich-mauritz/Driving.git", from: "2.4.0"),
         .package(url: "https://github.com/henrich-mauritz/VisionLib.git", from: "1.2.21"),
@@ -32,7 +31,6 @@ let package = Package(
             dependencies: [
                 "Swinject",
                 "FloatingPanel",
-                "KeychainAccess",
                 "SygicMaps",
                 "Driving",
                 "VisionLib",

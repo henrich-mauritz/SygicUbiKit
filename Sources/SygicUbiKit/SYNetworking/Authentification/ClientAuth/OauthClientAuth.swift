@@ -7,7 +7,6 @@
 
 import Foundation
 import AppAuth
-import KeychainAccess
 
 final class OauthClientAuth {
     
@@ -63,15 +62,13 @@ final class OauthClientAuth {
     private let oauthDataAreInKeychainKey = "oauthDataAreInKeychainKey"
     
     private func deleteState() {
-        let keychain = Keychain(service: keychainServiceName)
-        try? keychain.removeAll()
+        try? Keychain.deleteAll(service: keychainServiceName)
     }
     
     private func saveState(authState: OIDAuthState) {
-        let keychain = Keychain(service: keychainServiceName)
         do {
             let encodedData = try NSKeyedArchiver.archivedData(withRootObject: authState, requiringSecureCoding: true)
-            try keychain.set(encodedData, key: keychainOauthKey)
+            try Keychain.set(value: encodedData, account: keychainOauthKey, service: keychainServiceName)
             UserDefaults.standard.set(true, forKey: oauthDataAreInKeychainKey)
         }
         catch {
@@ -88,9 +85,8 @@ final class OauthClientAuth {
             return nil
         }
         
-        let keychain = Keychain(service: keychainServiceName)
         do {
-            if let data = try keychain.getData(keychainOauthKey) {
+            if let data = try Keychain.get(account: keychainOauthKey, service: keychainServiceName) {
                 if let authState = try NSKeyedUnarchiver.unarchivedObject(ofClass: OIDAuthState.self, from: data) {
                     return authState
                 }
