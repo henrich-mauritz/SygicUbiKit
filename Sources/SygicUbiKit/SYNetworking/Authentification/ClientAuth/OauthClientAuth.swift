@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import AppAuth
+@_implementationOnly import AppAuth
 
 final class OauthClientAuth {
     

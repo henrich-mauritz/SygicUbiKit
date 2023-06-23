@@ -1,5 +1,5 @@
 import UIKit
-import YoutubePlayer
+@_implementationOnly import YoutubePlayer
 
 // MARK: - NewsDetailViewProtocol
 
