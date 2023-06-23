@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C6551B2B2A457D5500EEA8F3 /* Bundle+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6551B2A2A457D5500EEA8F3 /* Bundle+extension.swift */; };
 		C6D582862A44B75A0054C270 /* Driving in Frameworks */ = {isa = PBXBuildFile; productRef = C6D582852A44B75A0054C270 /* Driving */; };
 		C6D582892A44B8410054C270 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = C6D582882A44B8410054C270 /* Swinject */; };
 		C6D5828C2A44B8620054C270 /* FloatingPanel in Frameworks */ = {isa = PBXBuildFile; productRef = C6D5828B2A44B8620054C270 /* FloatingPanel */; };
@@ -534,6 +535,7 @@
 
 /* Begin PBXFileReference section */
 		C649C44B2A44A76D0091C30E /* SygicUbiKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SygicUbiKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6551B2A2A457D5500EEA8F3 /* Bundle+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+extension.swift"; sourceTree = "<group>"; };
 		C6E508852A44E0C700B1EEC2 /* SygicUbiKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SygicUbiKit.h; sourceTree = "<group>"; };
 		C6E5088A2A44E0D000B1EEC2 /* SYTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SYTabBarViewController.swift; sourceTree = "<group>"; };
 		C6E5088B2A44E0D000B1EEC2 /* SYTabBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SYTabBarView.swift; sourceTree = "<group>"; };
@@ -1100,33 +1102,34 @@
 		C6E508882A44E0D000B1EEC2 /* SygicUbiKit */ = {
 			isa = PBXGroup;
 			children = (
-				C6E508892A44E0D000B1EEC2 /* SYTabBar */,
-				C6E5088D2A44E0D000B1EEC2 /* SygicSegmentedControlSDK */,
-				C6E508902A44E0D000B1EEC2 /* Configuration */,
-				C6E508952A44E0D000B1EEC2 /* MonthlyStats */,
+				C6E50A032A44E0D000B1EEC2 /* Common.swift */,
+				C6551B2A2A457D5500EEA8F3 /* Bundle+extension.swift */,
+				C6E50A682A44E0D000B1EEC2 /* Keychain.swift */,
+				C6E50B2C2A44E0D000B1EEC2 /* Polyline.swift */,
+				C6E50B352A44E0D000B1EEC2 /* Badges */,
 				C6E508C02A44E0D000B1EEC2 /* CommonSDK */,
+				C6E508902A44E0D000B1EEC2 /* Configuration */,
+				C6E50A542A44E0D000B1EEC2 /* DashcamVisionSDK */,
+				C6E5099B2A44E0D000B1EEC2 /* Discounts */,
+				C6E50A042A44E0D000B1EEC2 /* DrivingModule */,
+				C6E508952A44E0D000B1EEC2 /* MonthlyStats */,
+				C6E50AFE2A44E0D000B1EEC2 /* MultiDrivingScreen */,
+				C6E50AE52A44E0D000B1EEC2 /* News */,
+				C6E50B542A44E0D000B1EEC2 /* PhotoPickerSDK */,
 				C6E509332A44E0D000B1EEC2 /* Resources */,
 				C6E5093A2A44E0D000B1EEC2 /* Rewards */,
-				C6E509632A44E0D000B1EEC2 /* VehicleProfile */,
-				C6E5099B2A44E0D000B1EEC2 /* Discounts */,
-				C6E509D62A44E0D000B1EEC2 /* SygicDashcam */,
-				C6E50A032A44E0D000B1EEC2 /* Common.swift */,
-				C6E50A042A44E0D000B1EEC2 /* DrivingModule */,
-				C6E50A372A44E0D000B1EEC2 /* SYNetworking */,
-				C6E50A542A44E0D000B1EEC2 /* DashcamVisionSDK */,
-				C6E50A682A44E0D000B1EEC2 /* Keychain.swift */,
-				C6E50A692A44E0D000B1EEC2 /* Triplog */,
-				C6E50AE52A44E0D000B1EEC2 /* News */,
-				C6E50AFE2A44E0D000B1EEC2 /* MultiDrivingScreen */,
-				C6E50B092A44E0D000B1EEC2 /* StylingSDK */,
-				C6E50B0B2A44E0D000B1EEC2 /* TrafficInfoSDK */,
-				C6E50B182A44E0D000B1EEC2 /* URLImageCached */,
-				C6E50B1B2A44E0D000B1EEC2 /* SygicMapsModule */,
 				C6E50B1F2A44E0D000B1EEC2 /* SosAssistance */,
-				C6E50B2C2A44E0D000B1EEC2 /* Polyline.swift */,
+				C6E50B092A44E0D000B1EEC2 /* StylingSDK */,
+				C6E509D62A44E0D000B1EEC2 /* SygicDashcam */,
+				C6E50B1B2A44E0D000B1EEC2 /* SygicMapsModule */,
+				C6E5088D2A44E0D000B1EEC2 /* SygicSegmentedControlSDK */,
+				C6E50A372A44E0D000B1EEC2 /* SYNetworking */,
+				C6E508892A44E0D000B1EEC2 /* SYTabBar */,
 				C6E50B2D2A44E0D000B1EEC2 /* Tailgating */,
-				C6E50B352A44E0D000B1EEC2 /* Badges */,
-				C6E50B542A44E0D000B1EEC2 /* PhotoPickerSDK */,
+				C6E50B0B2A44E0D000B1EEC2 /* TrafficInfoSDK */,
+				C6E50A692A44E0D000B1EEC2 /* Triplog */,
+				C6E50B182A44E0D000B1EEC2 /* URLImageCached */,
+				C6E509632A44E0D000B1EEC2 /* VehicleProfile */,
 			);
 			path = SygicUbiKit;
 			sourceTree = "<group>";
@@ -3415,6 +3418,7 @@
 				C6E50D422A44E0D100B1EEC2 /* SosAssistanceContactTableCell.swift in Sources */,
 				C6E50BBD2A44E0D000B1EEC2 /* ImageLabelView.swift in Sources */,
 				C6E50BFF2A44E0D100B1EEC2 /* VehicleProfileNetworkRepository.swift in Sources */,
+				C6551B2B2A457D5500EEA8F3 /* Bundle+extension.swift in Sources */,
 				C6E50D522A44E0D100B1EEC2 /* BadgesListViewType.swift in Sources */,
 				C6E50B9E2A44E0D000B1EEC2 /* Math.swift in Sources */,
 				C6E50CF52A44E0D100B1EEC2 /* RoundedBoxView.swift in Sources */,
@@ -3972,6 +3976,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -3983,9 +3988,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.sygic.SygicUbiKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -4002,6 +4010,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -4013,9 +4022,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.sygic.SygicUbiKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
