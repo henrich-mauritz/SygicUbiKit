@@ -38,6 +38,9 @@ let package = Package(
                 "YoutubePlayer",
                 "AppAuth"
             ],
+            exclude: [
+                "Bundle+extension.swift",
+            ],
             resources: [
                 .process("Resources")
             ])
