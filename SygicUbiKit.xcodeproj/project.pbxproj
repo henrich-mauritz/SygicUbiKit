@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C61DF9FF2A49B8F80067A77C /* Swinject-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = C61DF9FE2A49B8F80067A77C /* Swinject-Dynamic */; };
+		C61DFA002A49B8F80067A77C /* Swinject-Dynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = C61DF9FE2A49B8F80067A77C /* Swinject-Dynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		C6551B2B2A457D5500EEA8F3 /* Bundle+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6551B2A2A457D5500EEA8F3 /* Bundle+extension.swift */; };
 		C6551B322A45A0C700EEA8F3 /* FloatingPanel in Frameworks */ = {isa = PBXBuildFile; productRef = C6551B312A45A0C700EEA8F3 /* FloatingPanel */; };
 		C6D582862A44B75A0054C270 /* Driving in Frameworks */ = {isa = PBXBuildFile; productRef = C6D582852A44B75A0054C270 /* Driving */; };
-		C6D582892A44B8410054C270 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = C6D582882A44B8410054C270 /* Swinject */; };
 		C6D5828F2A44B88D0054C270 /* SygicMaps in Frameworks */ = {isa = PBXBuildFile; productRef = C6D5828E2A44B88D0054C270 /* SygicMaps */; };
 		C6D582922A44B8AD0054C270 /* VisionLib in Frameworks */ = {isa = PBXBuildFile; productRef = C6D582912A44B8AD0054C270 /* VisionLib */; };
 		C6D582952A44B8D90054C270 /* SygicAuth in Frameworks */ = {isa = PBXBuildFile; productRef = C6D582942A44B8D90054C270 /* SygicAuth */; };
@@ -532,6 +533,20 @@
 		C6E50D632A44E0D100B1EEC2 /* PhotoEditing.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E50B582A44E0D000B1EEC2 /* PhotoEditing.swift */; };
 		C6E50D642A44E0D100B1EEC2 /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E50B592A44E0D000B1EEC2 /* PhotoPicker.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C61DFA012A49B8F80067A77C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C61DFA002A49B8F80067A77C /* Swinject-Dynamic in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C649C44B2A44A76D0091C30E /* SygicUbiKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SygicUbiKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1061,11 +1076,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6D5828F2A44B88D0054C270 /* SygicMaps in Frameworks */,
+				C61DF9FF2A49B8F80067A77C /* Swinject-Dynamic in Frameworks */,
 				C6551B322A45A0C700EEA8F3 /* FloatingPanel in Frameworks */,
 				C6D5829B2A44B9140054C270 /* AppAuth in Frameworks */,
 				C6D582952A44B8D90054C270 /* SygicAuth in Frameworks */,
 				C6D582862A44B75A0054C270 /* Driving in Frameworks */,
-				C6D582892A44B8410054C270 /* Swinject in Frameworks */,
 				C6D582982A44B8F30054C270 /* YoutubePlayer in Frameworks */,
 				C6D582922A44B8AD0054C270 /* VisionLib in Frameworks */,
 			);
@@ -3253,6 +3268,7 @@
 				C649C4472A44A76D0091C30E /* Sources */,
 				C649C4482A44A76D0091C30E /* Frameworks */,
 				C649C4492A44A76D0091C30E /* Resources */,
+				C61DFA012A49B8F80067A77C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -3261,13 +3277,13 @@
 			name = SygicUbiKit;
 			packageProductDependencies = (
 				C6D582852A44B75A0054C270 /* Driving */,
-				C6D582882A44B8410054C270 /* Swinject */,
 				C6D5828E2A44B88D0054C270 /* SygicMaps */,
 				C6D582912A44B8AD0054C270 /* VisionLib */,
 				C6D582942A44B8D90054C270 /* SygicAuth */,
 				C6D582972A44B8F30054C270 /* YoutubePlayer */,
 				C6D5829A2A44B9140054C270 /* AppAuth */,
 				C6551B312A45A0C700EEA8F3 /* FloatingPanel */,
+				C61DF9FE2A49B8F80067A77C /* Swinject-Dynamic */,
 			);
 			productName = SygicUbiKit;
 			productReference = C649C44B2A44A76D0091C30E /* SygicUbiKit.framework */;
@@ -4130,6 +4146,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		C61DF9FE2A49B8F80067A77C /* Swinject-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C6D582872A44B8410054C270 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = "Swinject-Dynamic";
+		};
 		C6551B312A45A0C700EEA8F3 /* FloatingPanel */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C6D5828A2A44B8620054C270 /* XCRemoteSwiftPackageReference "FloatingPanel" */;
@@ -4139,11 +4160,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C6D582842A44B75A0054C270 /* XCRemoteSwiftPackageReference "Driving" */;
 			productName = Driving;
-		};
-		C6D582882A44B8410054C270 /* Swinject */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C6D582872A44B8410054C270 /* XCRemoteSwiftPackageReference "Swinject" */;
-			productName = Swinject;
 		};
 		C6D5828E2A44B88D0054C270 /* SygicMaps */ = {
 			isa = XCSwiftPackageProductDependency;
