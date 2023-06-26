@@ -29,10 +29,12 @@ public class VehicleProfileModule {
         injectNetworkRepo()
         injectCacheRepo()
         container.register(VehicleProfileRepositoryType.self) { resolver -> VehicleProfileRepositoryType in
-            guard let networkRepo = resolver.resolve(VehicleProfileNetworkRepositoryType.self),
-                  let cacheRepo = resolver.resolve(VehicleProfileCacheRepositoryType.self) else {
-                fatalError("Didn't register any netowork or local repo")
-            }
+//            guard let networkRepo = resolver.resolve(VehicleProfileNetworkRepositoryType.self),
+//                  let cacheRepo = resolver.resolve(VehicleProfileCacheRepositoryType.self) else {
+//                fatalError("Didn't register any netowork or local repo")
+//            }
+            let networkRepo = VehicleProfileNetworkRepository()
+            let cacheRepo = VehicleProfileCacheRepository()
             return VehicleProfileRepository(cacheRepo: cacheRepo, networkRepo: networkRepo)
         }
 

@@ -12,17 +12,20 @@ public class SosAssistanceModule {
     /// - Returns: Module entry view controller
     public static func rootViewController(with model: SosAssistanceModel) -> SosAssistanceViewController {
         SYInjector.container.register(SosAssistanceModel.self, factory: { _ in model })
-        injectDefaults()
+        injectDefaults(model: model)
         return SYInjector.container.resolve(SosAssistanceViewController.self)!
     }
 
     /// Injects default components to InjectableType container required for module.
     /// Call this function before injecting your custom components for this module. No need to call, if you use SosAssistanceModule.rootViewController() for initializing
-    public static func injectDefaults() {
+    public static func injectDefaults(model: SosAssistanceModel) {
         guard !defaultsInjected else { return }
         let container = SYInjector.container
         container.register(SosAssistanceViewController.self, factory: { _ in SosAssistanceViewController() })
-        container.register(SosAssistanceViewModelProtocol.self, factory: { r in SosAssistanceViewModel(with: r.resolve(SosAssistanceModel.self)!) })
+    
+        container.register(SosAssistanceViewModelProtocol.self, factory: { r in
+            SosAssistanceViewModel(with: model)
+        })
         container.register(SosAssistanceViewProtocol.self, factory: { _ in SosAssistanceView() })
         defaultsInjected = true
     }

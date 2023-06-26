@@ -16,10 +16,13 @@ extension Container {
         injectOverviewNetworkRepo()
         injectOverviewCacheRepo()
         register(TriplogOverviewRepositoryType.self) { resolver -> TriplogOverviewRepositoryType in
-            guard let networkRepo = resolver.resolve(TriplogOverviewNetworkRepositoryType.self),
-                  let cacheRepo = resolver.resolve(TriplogOverviewCacheRepositoryType.self) else {
-                fatalError("Didn't register any netowork or local repo")
-            }
+//            guard let networkRepo = resolver.resolve(TriplogOverviewNetworkRepositoryType.self),
+//                  let cacheRepo = resolver.resolve(TriplogOverviewCacheRepositoryType.self) else {
+//                fatalError("Didn't register any netowork or local repo")
+//            }
+            let networkRepo = TriplogOverviewNetworkRepository()
+            let cacheRepo = TriplogOverviewCacheRepository()
+            
             return TriplogOverviewRepository(with: networkRepo, cacheRepo: cacheRepo)
         }
     }
@@ -52,10 +55,13 @@ extension Container {
         injectMonthlyNetworkRepo()
         injectMonthlyCacheRepo()
         register(TriplogMonthlyRepositoryType.self) { resolver -> TriplogMonthlyRepositoryType in
-            guard let networkRepo = resolver.resolve(TriplogMonthlyNewtworkRepositoryType.self),
-                  let cacheRepo = resolver.resolve(TriplogMonthlyCacheRepositoryType.self) else {
-                fatalError("Didn't register any netowork or local repo")
-            }
+//            guard let networkRepo = resolver.resolve(TriplogMonthlyNewtworkRepositoryType.self),
+//                  let cacheRepo = resolver.resolve(TriplogMonthlyCacheRepositoryType.self) else {
+//                fatalError("Didn't register any netowork or local repo")
+//            }
+            
+            let networkRepo = TriplogMonthlyNetworkRepository()
+            let cacheRepo = TriplogMonthlyCacheRepository()
             return TriplogMonthlyRepository(networkReposotory: networkRepo, cacheRepository: cacheRepo)
         }
     }
@@ -88,10 +94,13 @@ extension Container {
         injectDetailNetworkRepo()
         injectDetailCacheRepo()
         register(TripDetailRepositoryType.self) { resolver -> TripDetailRepositoryType in
-            guard let networkRepo = resolver.resolve(TripDetailNetworkRepositoryType.self),
-                  let cacheRepo = resolver.resolve(TripDetailCacheRepositoryType.self) else {
-                fatalError("No repos injected for trip detail")
-            }
+//            guard let networkRepo = resolver.resolve(TripDetailNetworkRepositoryType.self),
+//                  let cacheRepo = resolver.resolve(TripDetailCacheRepositoryType.self) else {
+//                fatalError("No repos injected for trip detail")
+//            }
+            
+            let networkRepo = TripDetailNetworkRepository()
+            let cacheRepo = TripDetailCacheRepository()
             return TripDetailRepository(networkRepo: networkRepo, cacheRepo: cacheRepo)
         }
     }

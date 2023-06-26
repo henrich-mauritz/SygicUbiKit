@@ -8,9 +8,11 @@ extension Container {
         guard resolve(DiscountsOverviewRepositoryType.self) == nil else { return }
         injectOverviewDiscountNetworkRepo()
         register(DiscountsOverviewRepositoryType.self) { resolver -> DiscountsOverviewRepositoryType in
-            guard let networkRepo = resolver.resolve(DiscountsOverviewNetworkRepositoryType.self) else {
-                fatalError("Didn't register any netowork or local repo")
-            }
+//            guard let networkRepo = resolver.resolve(DiscountsOverviewNetworkRepositoryType.self) else {
+//                fatalError("Didn't register any netowork or local repo")
+//            }
+            
+            let networkRepo = DiscountsOverviewNetworkRepository()
             return DiscountsOverviewRepository(networkRepository: networkRepo)
         }
     }
@@ -59,9 +61,10 @@ public extension Container {
     func injectDiscountCodeRepository() {
         injectDiscountCodeNetworkRepo()
         register(DiscountCodesRepositoryType.self) { resolver -> DiscountCodesRepositoryType in
-            guard let networkRepo = resolver.resolve(DiscountCodesNewtorkRepositoryType.self) else {
-                fatalError("Didn't register any discount code network repo")
-            }
+//            guard let networkRepo = resolver.resolve(DiscountCodesNewtorkRepositoryType.self) else {
+//                fatalError("Didn't register any discount code network repo")
+//            }
+            let networkRepo = DiscountCodesProgressNetworkRepository()
             return DiscountCodesProgressRepository(with: networkRepo)
         }
     }

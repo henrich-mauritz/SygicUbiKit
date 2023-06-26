@@ -26,8 +26,16 @@ public class RewardsModule {
     public static func injectDefaults() {
         guard !defaultsInjected else { return }
         let container = SYInjector.container
-        container.register(RewardsViewController.self, factory: { r in RewardsViewController(with: r.resolve(RewardsListViewModelProtocol.self)) })
-        container.register(RewardsListViewModelProtocol.self, factory: { _ in RewardsListViewModel() })
+        
+        container.register(RewardsListViewModelProtocol.self, factory: { _ in
+            RewardsListViewModel()
+        })
+        
+        container.register(RewardsViewController.self, factory: { r in
+            //RewardsViewController(with: r.resolve(RewardsListViewModelProtocol.self))
+            RewardsViewController(with: RewardsListViewModel())
+        })
+        
         container.register(RewardsListViewProtocol.self, factory: { _ in RewardsTableView() })
         container.register(RewardCellProtocol.self, factory: { _ in RewardCell() })
         container.register(RewardDetailViewController.self, factory: { _ in RewardDetailViewController() })

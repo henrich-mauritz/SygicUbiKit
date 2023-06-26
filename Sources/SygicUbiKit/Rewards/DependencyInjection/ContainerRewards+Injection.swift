@@ -8,10 +8,13 @@ extension Container {
         injectNetworkRepo()
         injectCacheRepo()
         register(RewardsRepositoryType.self) { resolver -> RewardsRepositoryType in
-            guard let networkRepo = resolver.resolve(RewardsNetworkRepositoryType.self),
-                  let cacheRepo = resolver.resolve(RewardsCacheRepositoryType.self) else {
-                fatalError("Didn't register any netowork or local repo")
-            }
+//            guard let networkRepo = resolver.resolve(RewardsNetworkRepositoryType.self),
+//                  let cacheRepo = resolver.resolve(RewardsCacheRepositoryType.self) else {
+//                fatalError("Didn't register any netowork or local repo")
+//            }
+            let networkRepo = RewardsNetworkRepository()
+            let cacheRepo = RewardsCacheRepository()
+            
             return RewardsRepository(with: networkRepo, cacheRepo: cacheRepo)
         }
     }
