@@ -20,6 +20,10 @@ public class VehicleProfileModule {
         return SYInjector.container.resolve(VehicleProfileListViewController.self)!
     }
 
+    
+    private static var cacheRepo: VehicleProfileCacheRepositoryType = {
+       return VehicleProfileCacheRepository()
+    }()
     /// Injects default components to InjectableType container required for module.
     /// Call this function before injecting your custom components for this module. No need to call, if you use BadgesModule.rootViewController() for initializing
     public static func injectDefaults() {
@@ -34,7 +38,7 @@ public class VehicleProfileModule {
 //                fatalError("Didn't register any netowork or local repo")
 //            }
             let networkRepo = VehicleProfileNetworkRepository()
-            let cacheRepo = VehicleProfileCacheRepository()
+            //let cacheRepo = VehicleProfileCacheRepository()
             return VehicleProfileRepository(cacheRepo: cacheRepo, networkRepo: networkRepo)
         }
 
@@ -55,7 +59,7 @@ public class VehicleProfileModule {
     private static func injectCacheRepo() {
         let container = SYInjector.container
         container.register(VehicleProfileCacheRepositoryType.self) { _ in
-            VehicleProfileCacheRepository()
+            self.cacheRepo
         }.inObjectScope(.container)
     }
 
