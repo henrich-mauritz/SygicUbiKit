@@ -1,3 +1,5 @@
+rm -R "/Users/henrichmauritz/Documents/Sygic/Packages/Output/SygicUbiKit.xcframework"
+
 xcodebuild archive \
             -project SygicUbiKit.xcodeproj \
             -scheme SygicUbiKit \
