@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "SygicUbiKit",
     platforms: [
-        .iOS(.v14)
+        .iOS(.v11)
     ],
     products: [
         .library(
@@ -17,7 +17,7 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "SygicUbiKit",
-            url: "TODO link na mawen zip",
-            checksum: "TODO link na mawen checksum")
+            url: "%LINK_TO_MAVEN%",
+            checksum: "%CHECKSUM%")
     ]
 )
