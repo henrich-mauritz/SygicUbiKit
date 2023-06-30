@@ -18,6 +18,6 @@ let package = Package(
         .binaryTarget(
             name: "SygicUbiKit",
             url: "https://link.us",
-            checksum: "${checksum}")
+            checksum: "$checksum")
     ]
 )
