@@ -17,7 +17,7 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "SygicUbiKit",
-            url: "https://link.us",
+            url: "https://github.com/henrich-mauritz/SygicUbiKit/archive/refs/tags/4.1.15.zip",
             checksum: "0c0dab663f36f130041684b1a860875dbe6172b0d807dae84c53a5bca5ff99ba")
     ]
 )
