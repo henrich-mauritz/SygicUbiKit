@@ -17,7 +17,7 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "SygicUbiKit",
-            url: "https://github.com/henrich-mauritz/SygicUbiKit/releases/download/4.3.11/SygicUbiKit.xcframework-4.3.11.zip",
-            checksum: "4e037241a4dedfe4565173b78d6ca4a53d58926e99bf9bb732cbb3a577fdf618")
+            url: "https://github.com/henrich-mauritz/SygicUbiKit/releases/download/4.3.12/SygicUbiKit.xcframework-4.3.12.zip",
+            checksum: "f9e648b884213e50cd0ffa33acb3ea01c26f0357b2a80ae7709e755bf2709085")
     ]
 )
